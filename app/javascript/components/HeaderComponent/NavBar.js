@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 class NavBar extends Component {
   render() {
     return (
-      <header>
-        <ul id="headerButtons">
-          <li className="navButton"><Link to="/about">About</Link></li>
-        </ul>
-      </header>
-    )
+      <div className="ui inverted button">
+        <Link to="/about">About</Link>
+      </div>
+    );
   }
 }
 export default NavBar;

@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .galaxy{
+   background-image: url("starry-night.jpg");
+   background-color: black;
+ }

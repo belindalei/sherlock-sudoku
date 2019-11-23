@@ -18,10 +18,10 @@ class App extends React.Component {
               path="/game"
               render={() => <GamePage greeting="Friend" />}
             />
-            <Route
+          <Route
               path="/about"
               render={() => <AboutPage />}
-            />
+          /> 
           </Switch>
         </BrowserRouter>
       </Provider>
