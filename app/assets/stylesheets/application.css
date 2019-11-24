@@ -14,7 +14,57 @@
  *= require_self
  */
 
- .galaxy{
-   background-image: url("starry-night.jpg");
+  body{
+  height: 100%;
+  margin: 0;
+  color: black;
+  text-align:center;
+  background-image: url('https://www.muralsyourway.com/media/catalog/product/cache/1/base/1200x/040ec09b1e35df139433887a97daa66f/r/f/rf9967533_illustration_of_a_starry_sky_night_scene_copy.jpg');
+  }
+
+  main {
+  width:100%;
+  min-height:calc(100% - 100px);
+  background-size: cover;
+  background-attachment:fixed;
+  }
+
+  .home-page {
+   height: 100%; 
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+
+  .home-page-container {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
    background-color: black;
+   color: white; 
+   padding: 20px;
+   border-radius: 10%; 
  }
+
+
+ .about-container{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   background-color: black;
+   color: white; 
+   padding: 20px;
+   border-radius: 10%; 
+ }
+
+ .wrapper{
+  position:absolute;
+  top:0;
+  right:0;
+  margin: 10px;
+ }
+

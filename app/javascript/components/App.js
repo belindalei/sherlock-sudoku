@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
-import GamePage from "./GamePage";
+import Game from "./Game";
 import HomePage from './HomePage';
 import AboutPage from './AboutPage'
 import configureStore from "../configureStore";
@@ -16,7 +16,7 @@ class App extends React.Component {
             <Route exact path="/" render={() => <HomePage />} />
             <Route
               path="/game"
-              render={() => <GamePage greeting="Friend" />}
+              render={() => <Game/>}
             />
           <Route
               path="/about"
