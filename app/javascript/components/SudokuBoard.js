@@ -1,12 +1,16 @@
-import React from "react";
-import SudokuField from './SudokuField'
+import React, { Component } from "react";
+import SudokuField from "./SudokuField";
+import Timer from "./Timer";
+import Result from "./Result";
 
-export default class SudokuBoard extends React.Component {
+export default class SudokuBoard extends Component {
   render() {
-    const {sudoku, onChange} = this.props;
+    const { sudoku, onChange } = this.props;
 
     return (
       <div>
+        {!sudoku.solveTime && <Timer start={sudoku.startTime} />}
+        {sudoku.solveTime && <Result sudoku={sudoku} />}
         {sudoku.rows.map(row => (
           <div className="row" key={row.index}>
             {row.cols.map(field => (
@@ -15,6 +19,6 @@ export default class SudokuBoard extends React.Component {
           </div>
         ))}
       </div>
-    ); 
+    );
   }
 }

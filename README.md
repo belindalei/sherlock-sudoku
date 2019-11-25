@@ -1,24 +1,14 @@
-# README
+#Sherlock Sudoku 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Introduction
+Welcome to the Sherlock Sudoku. This game was inspired by my belated grandfather, who was a lover of Sherlock. Sudoku is well thought of as a game to help stimulate and exercise the brains of patients who have had strokes. It is with my hope that like my grandpa, others will be able to train their brains as well. 
 
-Things you may want to cover:
+##Usage
 
-* Ruby version
+`yarn install`
+`rails s`
 
-* System dependencies
 
-* Configuration
+###Credits
+I had great assistance from watching a hackathon video by Netifly founder, @biilmann, while building the game. The video can be found [here](https://www.youtube.com/watch?v=GytUZLK4kwA).
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

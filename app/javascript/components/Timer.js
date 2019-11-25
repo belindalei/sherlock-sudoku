@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 
 export default class Timer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      elapsed: 0
-    };
+  state = {
+    elapsed: 0
   }
 
   componentDidMount() {
@@ -19,6 +16,7 @@ export default class Timer extends Component {
   }
 
   componentWillUnmount() {
+    console.log("deleting interval")
     delete this.interval;
   }
 

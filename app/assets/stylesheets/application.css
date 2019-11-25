@@ -17,7 +17,7 @@
   body{
   height: 100%;
   margin: 0;
-  color: black;
+  color: white;
   text-align:center;
   background-image: url('https://www.muralsyourway.com/media/catalog/product/cache/1/base/1200x/040ec09b1e35df139433887a97daa66f/r/f/rf9967533_illustration_of_a_starry_sky_night_scene_copy.jpg');
   }
@@ -80,5 +80,4 @@
 
  .field[readonly]{
    color: #222222
-
  }
