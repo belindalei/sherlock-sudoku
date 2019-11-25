@@ -12,16 +12,15 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Switch> 
+          <Switch>
             <Route exact path="/" render={() => <HomePage />} />
             <Route
               path="/game"
-              render={() => <Game/>}
+              render={() => (
+                <Game />
+              )}
             />
-          <Route
-              path="/about"
-              render={() => <AboutPage />}
-          /> 
+            <Route path="/about" render={() => <AboutPage />} />
           </Switch>
         </BrowserRouter>
       </Provider>

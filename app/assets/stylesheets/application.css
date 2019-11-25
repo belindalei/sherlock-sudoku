@@ -68,3 +68,17 @@
   margin: 10px;
  }
 
+
+ /*board CSS */
+ .field {
+   width: 3rem; 
+   height: 3rem; 
+   font-size: 2rem; 
+   text-align: center;
+   color:#BBB
+ }
+
+ .field[readonly]{
+   color: #222222
+
+ }

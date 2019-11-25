@@ -1,33 +1,58 @@
 import React from 'react';
-import Square from './Square'
+import { Link } from "react-router-dom";
+import generator from "sudoku"; 
+import SudokuBoard from './SudokuBoard';
+
+const generateSudoku = () => {
+  const raw = generator.makepuzzle()
+  const result = {rows: []}
+
+  for(let i=0; i<9; i++){
+    const row = {cols: [], index: i};
+    for (let j=0; j<9; j++){
+      const value = raw[i + 9 + j]
+      const col = {
+        row: i,
+        col: j, 
+        value: value, 
+        readonly: value !== null //prefilled fill
+      };
+      row.cols.push(col);
+    }
+    result.rows.push(row)
+  }
+  return result; 
+}
+
 
 class Game extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
+  state = {
+    sudoku: generateSudoku()
+  };
+
+  handleChange = e => {
+    this.setState(
+      produce(state => {
+        state.sudoku.rows[e.row].cols[e.col].value = e.value;
+        if (!state.sudoku.solvedTime) {
+          const solved = checkSolution(state.sudoku);
+          if (solved) {
+            state.sudoku.solveTime = new Date();
+            state.sudoku.shareUrl = shareUrl(state.sudoku);
+          }
+        }
+      })
+    );
+  };
+
   render() {
-    const status = 'Next player: X';
     return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+      <div className="game">
+        <h1>Play the game below!</h1>
+        <SudokuBoard sudoku={this.state.sudoku} />
       </div>
     );
   }
 }
-
+    
 export default Game;

@@ -48,3 +48,8 @@ ol, ul {
 .game-info {
   margin-left: 20px;
 }
+
+.board {
+  left: 50%;
+  top: 50%;
+}
