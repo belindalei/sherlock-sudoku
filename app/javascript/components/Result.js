@@ -9,7 +9,7 @@ export default class Result extends Component {
 
     return (
       <div>
-        <h2>You solved the sudoku in {elapsed} seconds</h2>
+        <p>You solved the sudoku in {elapsed} seconds</p>
       </div>
     );
   }
