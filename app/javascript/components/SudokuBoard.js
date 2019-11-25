@@ -8,7 +8,7 @@ export default class SudokuBoard extends Component {
     const { sudoku, onChange } = this.props;
 
     return (
-      <div>
+      <div className="sudoku-board">
         {!sudoku.solveTime && <Timer start={sudoku.startTime} />}
         {sudoku.solveTime && <Result sudoku={sudoku} />}
         {sudoku.rows.map(row => (

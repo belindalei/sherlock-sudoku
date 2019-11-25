@@ -87,9 +87,17 @@ class Game extends React.Component {
     return (
       <div className="game">
         <h1 className="ui inverted header">Play the game below!</h1>
-        <SudokuBoard sudoku={this.state.sudoku} onChange={this.handleChange} />
-        <button onClick={this.solveSudoku}>I give up!</button>
-        <div>
+          <SudokuBoard
+            sudoku={this.state.sudoku}
+            onChange={this.handleChange}
+          />
+        <button
+          className="ui inverted primary button"
+          onClick={this.solveSudoku}
+        >
+          Watson!!
+        </button>
+        <div className="return-home">
           <Link to="/">Return Home</Link>
         </div>
       </div>

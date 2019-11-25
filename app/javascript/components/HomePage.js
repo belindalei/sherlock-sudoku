@@ -16,7 +16,7 @@ class HomePage extends React.Component {
         </div>
       </div>
       <div className="wrapper">
-        <div className="ui inverted button">
+        <div className="ui inverted primary button">
           <Link to="/about">About</Link>
         </div>
       </div>

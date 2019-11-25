@@ -81,3 +81,20 @@
  .field[readonly]{
    color: #222222
  }
+
+ .sudoku-board{
+   text-align: center;
+   margin: 20px;
+   transition: transform 300ms ease-in-out;
+ }
+
+ .game{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .return-home{
+   margin: 10px; 
+ }
